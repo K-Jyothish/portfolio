@@ -6,6 +6,8 @@ import Navbar from "@/components/Navbar";
 import BackgroundGlow from "@/components/BackgroundGlow";
 import ScrollToTop from "@/components/ScrollToTop";
 import ScrollProgress from "@/components/ScrollProgress";
+import { Analytics } from '@vercel/analytics/next';
+
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -50,6 +52,7 @@ export default function RootLayout({
           <BackgroundGlow />
           {children}
         </SmoothScroll>
+        <Analytics />
       </body>
     </html>
   );
