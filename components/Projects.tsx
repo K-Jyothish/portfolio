@@ -38,6 +38,14 @@ const projects: Project[] = [
     },
     {
         id: 4,
+        title: "WDS Cyber Defense System",
+        category: "Cybersecurity · Deep Learning · IoT",
+        type: "github",
+        description: "Multimodal sensor fusion with deep ensembles for holistic Water Distribution Systems cyber defense using advanced machine learning techniques.",
+        link: "https://github.com/developerbro888/WDS-Cyber-Defense-"
+    },
+    {
+        id: 5,
         title: "Expense Tracker",
         category: "Web · Finance · Python",
         type: "github",
@@ -45,7 +53,7 @@ const projects: Project[] = [
         link: "https://github.com/developerbro888/Expense-Tracker"
     },
     {
-        id: 5,
+        id: 6,
         title: "Secret Santa Organizer",
         category: "Web · Social · Python",
         type: "github",
@@ -58,7 +66,7 @@ export default function Projects() {
     const [selectedId, setSelectedId] = useState<number | null>(null);
 
     return (
-        <section id="projects" className="relative z-20 bg-[#121212]/90 backdrop-blur-md py-32 px-8">
+        <section id="projects" className="relative z-20 bg-[#121212] py-16 md:py-32 px-6 md:px-8 border-t border-white/5">
             <div className="max-w-4xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -67,7 +75,7 @@ export default function Projects() {
                     className="text-center mb-20"
                 >
                     <span className="text-sm font-mono text-blue-400 tracking-wider uppercase mb-4 block">Portfolio</span>
-                    <h2 className="text-4xl md:text-7xl font-bold text-white tracking-tight">Crafted Experiences</h2>
+                    <h2 className="text-4xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent tracking-tight">Crafted Experiences</h2>
                 </motion.div>
 
                 <div className="space-y-6">
@@ -78,7 +86,14 @@ export default function Projects() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             viewport={{ once: true }}
-                            className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-white/20 transition-colors duration-300"
+                            whileHover={{
+                                scale: 1.02,
+                                rotateX: 2,
+                                rotateY: 2,
+                                transition: { duration: 0.3 }
+                            }}
+                            className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-white/20 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300"
+                            style={{ transformStyle: 'preserve-3d' }}
                         >
                             <button
                                 onClick={() => setSelectedId(selectedId === project.id ? null : project.id)}
@@ -88,9 +103,15 @@ export default function Projects() {
                                     <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">{project.title}</h3>
                                     <span className="text-sm text-gray-500 font-mono tracking-wide">{project.category}</span>
                                 </div>
-                                <span className="text-3xl text-gray-600 font-light group-hover:text-white transition-colors">
-                                    {selectedId === project.id ? '−' : '+'}
-                                </span>
+                                <motion.span
+                                    animate={{
+                                        rotate: selectedId === project.id ? 45 : 0,
+                                    }}
+                                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                                    className="text-3xl text-gray-600 font-light group-hover:text-white transition-colors"
+                                >
+                                    +
+                                </motion.span>
                             </button>
 
                             <AnimatePresence>

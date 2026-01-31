@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export default function Achievements() {
     return (
-        <section id="achievements" className="relative z-20 bg-[#121212] py-32 px-8 border-t border-white/5">
+        <section id="achievements" className="relative z-20 bg-[#121212] py-16 md:py-32 px-6 md:px-8 border-t border-white/5">
             <div className="max-w-6xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -14,7 +14,7 @@ export default function Achievements() {
                     className="text-center mb-20"
                 >
                     <span className="text-sm font-mono text-blue-400 tracking-wider uppercase mb-4 block">Milestones</span>
-                    <h2 className="text-4xl md:text-6xl font-bold text-white tracking-tight">Achievements & Impact</h2>
+                    <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent tracking-tight">Achievements & Impact</h2>
                 </motion.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -27,7 +27,7 @@ export default function Achievements() {
                         className="bg-white/5 p-8 rounded-3xl border border-white/10 hover:bg-white/10 transition-colors"
                     >
                         <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-3">
-                            <span className="text-blue-400">#</span> Certifications
+                            <span className="text-blue-400">🎓</span> Certifications
                         </h3>
                         <ul className="space-y-4">
                             {[
@@ -51,7 +51,7 @@ export default function Achievements() {
                         className="bg-white/5 p-8 rounded-3xl border border-white/10 hover:bg-white/10 transition-colors"
                     >
                         <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-3">
-                            <span className="text-yellow-500">★</span> Honors
+                            <span className="text-purple-400">🏆</span> Awards & Honors
                         </h3>
                         <ul className="space-y-4">
                             {[

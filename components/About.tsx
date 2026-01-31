@@ -23,26 +23,9 @@ const skills = [
 
 export default function About() {
     return (
-        <section id="about" className="relative z-20 bg-[#121212]/80 backdrop-blur-sm py-32 px-8 border-t border-white/5">
+        <section id="about" className="relative z-20 bg-[#121212]/80 backdrop-blur-sm py-16 md:py-32 px-6 md:px-8 border-t border-white/5">
             <div className="max-w-5xl mx-auto">
                 {/* Short Bio */}
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                    viewport={{ once: true }}
-                    className="mb-32 text-center"
-                >
-                    <span className="text-sm font-mono text-blue-400 tracking-wider uppercase mb-6 block">About Me</span>
-                    <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-4xl mx-auto mb-8 font-light">
-                        I am an M.Tech scholar specializing in <span className="text-white font-medium">Computer Science & Engineering</span>, bridging the gap between academic theory and real-world application.
-                    </p>
-                    <p className="text-base text-gray-400 leading-relaxed max-w-3xl mx-auto">
-                        My passion lies in <strong>Computer Vision</strong> and <strong>Applied ML</strong>—building intelligence that doesn't just process data, but understands the world.
-                    </p>
-                </motion.div>
-
-                {/* Philosophy */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -50,11 +33,31 @@ export default function About() {
                     viewport={{ once: true }}
                     className="mb-32 text-center"
                 >
-                    <span className="text-sm font-mono text-purple-400 tracking-wider uppercase mb-4 block">Core Philosophy</span>
-                    <p className="text-2xl md:text-4xl font-light text-white italic max-w-4xl mx-auto leading-relaxed">
-                        "I believe good AI should be <span className="text-blue-400">practical</span>, <span className="text-purple-400">accessible</span>, and ethically designed to create meaningful impact."
+                    <span className="text-sm font-mono text-blue-400 tracking-wider uppercase mb-6 block">About Me</span>
+                    <p className="text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed max-w-4xl mx-auto mb-8 font-light">
+                        I am an <span className="text-blue-400 font-medium">M.Tech scholar</span> specializing in <span className="text-purple-400 font-medium">Computer Science & Engineering</span>, bridging the gap between academic theory and real-world application.
+                    </p>
+                    <p className="text-base text-gray-400 leading-relaxed max-w-3xl mx-auto">
+                        My passion lies in <strong className="text-cyan-400">Computer Vision</strong> and <strong className="text-indigo-400">Applied ML</strong>—building intelligence that doesn't just process data, but understands the world.
                     </p>
                 </motion.div>
+
+                {/* Core Philosophy */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    viewport={{ once: true }}
+                    className="mb-32"
+                >
+                    <h3 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-12 text-center">Core Philosophy</h3>
+                    <div className="relative max-w-4xl mx-auto">
+                        <p className="text-lg md:text-xl lg:text-2xl text-gray-300 leading-relaxed text-center italic">
+                            "I don't just write code — I design systems that <span className="text-blue-400">learn</span>, <span className="text-purple-400">adapt</span>, and <span className="text-cyan-400">evolve</span>. My work sits at the intersection of research and engineering, where theory meets real-world impact."
+                        </p>
+                    </div>
+                </motion.div>
+
 
                 {/* Education */}
                 <motion.div
@@ -66,9 +69,12 @@ export default function About() {
                 >
                     <h3 className="text-3xl font-bold text-white mb-12 text-center">Academic Journey</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <motion.div
+                        <motion.a
+                            href="https://www.google.com/search?q=tkm+college+of+engineering&sca_esv=4f31704060aa6193&rlz=1C5MACD_enIN1130IN1131&sxsrf=ANbL-n6d8BdPhg0Gq1XY83RjzOxoktiO8Q%3A1769838479739&ei=j5d9aZzvLMuiseMPwsyU0AI&gs_ssp=eJzj4tTP1TcwKyrONTBg9JIqyc5VSM7PyUlNT1XIT1NIzUvPzEtNLcrMSwcA9NcNQw&oq=tkm+&gs_lp=Egxnd3Mtd2l6LXNlcnAiBHRrbSAqAggAMgoQLhiABBgnGIoFMgoQIxiABBgnGIoFMgsQLhiABBjHARivATIFEAAYgAQyCxAuGIAEGMcBGK8BMgsQLhiABBjHARivATIFEAAYgAQyBRAuGIAEMgsQLhiABBjHARivATILEC4YgAQYxwEYrwFI-A9QlgNYzAhwAXgBkAEAmAGWAaABrwSqAQMwLjS4AQHIAQD4AQGYAgWgAtYEqAIKwgIHEC4YJxjqAsICBxAjGCcY6gLCAg0QLhjRAxjHARgnGOoCwgIQECMY8AUYgAQYJxjJAhiKBcICChAAGIAEGEMYigXCAgsQABiABBixAxiDAcICERAuGIAEGLEDGNEDGIMBGMcBwgINEAAYgAQYsQMYQxiKBZgDBPEFKGv3yLquGt-SBwMxLjSgB45psgcDMC40uAfSBMIHBTItMy4yyAcfgAgA&sclient=gws-wiz-serp"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             whileHover={{ scale: 1.02, backgroundColor: "rgba(255, 255, 255, 0.08)" }}
-                            className="bg-white/5 p-8 rounded-3xl border border-white/10 relative overflow-hidden group hover:border-blue-500/30 transition-all duration-300"
+                            className="bg-white/5 p-8 rounded-3xl border border-white/10 relative overflow-hidden group hover:border-blue-500/30 transition-all duration-300 cursor-pointer block"
                         >
                             <div className="absolute top-0 right-0 p-4 opacity-50 group-hover:opacity-100 transition-opacity">
                                 <span className="relative flex h-3 w-3">
@@ -79,16 +85,19 @@ export default function About() {
                             <span className="text-xs font-mono text-blue-400 mb-2 block tracking-wider uppercase">Master's Degree</span>
                             <h4 className="text-2xl font-bold text-white mb-2">TKM College of Engineering</h4>
                             <p className="text-gray-400">M.Tech in Computer Science & Engineering</p>
-                        </motion.div>
+                        </motion.a>
 
-                        <motion.div
+                        <motion.a
+                            href="https://www.google.com/search?gs_ssp=eJzj4tTP1TdIN7TIrTRg9OJKT01WyEwpzc7OBABOrwca&q=gec+idukki&rlz=1C5MACD_enIN1130IN1131&oq=gec+id&gs_lcrp=EgZjaHJvbWUqBwgBEC4YgAQyCggAEAAY4wIYgAQyBwgBEC4YgAQyBggCEEUYOTIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABNIBCDMwOTJqMGo3qAIIsAIB8QVZg6osLOWExPEFWYOqLCzlhMQ&sourceid=chrome&ie=UTF-8"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             whileHover={{ scale: 1.02, backgroundColor: "rgba(255, 255, 255, 0.08)" }}
-                            className="bg-white/5 p-8 rounded-3xl border border-white/10 hover:border-purple-500/30 transition-all duration-300"
+                            className="bg-white/5 p-8 rounded-3xl border border-white/10 hover:border-purple-500/30 transition-all duration-300 cursor-pointer block"
                         >
                             <span className="text-xs font-mono text-gray-500 mb-2 block tracking-wider uppercase">Bachelor's Degree</span>
                             <h4 className="text-2xl font-bold text-white mb-2">GEC Idukki</h4>
                             <p className="text-gray-400">B.Tech in Computer Science & Engineering</p>
-                        </motion.div>
+                        </motion.a>
                     </div>
                 </motion.div>
 
@@ -124,6 +133,6 @@ export default function About() {
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
     );
 }

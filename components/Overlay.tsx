@@ -31,8 +31,8 @@ export default function Overlay({ scrollYProgress }: OverlayProps) {
                 className="absolute inset-0 flex items-center justify-center p-4 text-center"
             >
                 <div className="flex flex-col items-center gap-8">
-                    <div className="flex flex-col items-center gap-8">
-                        <h1 className="flex overflow-hidden text-7xl md:text-9xl font-extrabold text-white tracking-tighter leading-none drop-shadow-2xl">
+                    <div className="flex flex-col items-center gap-4 md:gap-8">
+                        <h1 className="flex overflow-hidden text-4xl sm:text-6xl md:text-7xl lg:text-9xl font-extrabold text-white tracking-tighter leading-none drop-shadow-2xl">
                             {"Jyothish K".split('').map((char, index) => (
                                 <motion.span
                                     key={index}
@@ -62,8 +62,8 @@ export default function Overlay({ scrollYProgress }: OverlayProps) {
                                 </motion.span>
                             ))}
                         </h1>
-                        <p className="font-mono text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-purple-400 text-base md:text-xl font-normal tracking-wider max-w-3xl text-center leading-loose px-6 opacity-90">
-                            "I don’t just code — I animate, simulate, and make pixels behave intelligently, teaching machines how humans move while still learning how humans think."
+                        <p className="font-mono text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-purple-400 text-sm sm:text-base md:text-lg lg:text-xl font-normal tracking-wider max-w-3xl text-center leading-relaxed md:leading-loose px-4 md:px-6 opacity-90">
+                            "I don't just code — I animate, simulate, and make pixels behave intelligently, teaching machines how humans move while still learning how humans think."
                         </p>
                     </div>
                 </div>
@@ -72,9 +72,9 @@ export default function Overlay({ scrollYProgress }: OverlayProps) {
             {/* Section 2 */}
             <motion.div
                 style={{ opacity: opacity2, y: y2 }}
-                className="absolute inset-0 flex items-center justify-center md:justify-start px-8 md:pl-20"
+                className="absolute inset-0 flex items-center justify-center md:justify-start px-6 md:px-8 md:pl-20"
             >
-                <h2 className="text-4xl md:text-6xl font-bold text-white max-w-3xl leading-tight">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white max-w-3xl leading-tight text-center md:text-left">
                     Designing <span className="text-blue-500">Intelligent Systems</span>
                 </h2>
             </motion.div>
@@ -82,9 +82,9 @@ export default function Overlay({ scrollYProgress }: OverlayProps) {
             {/* Section 3 */}
             <motion.div
                 style={{ opacity: opacity3, y: y3 }}
-                className="absolute inset-0 flex items-center justify-center md:justify-end px-8 md:pr-20"
+                className="absolute inset-0 flex items-center justify-center md:justify-end px-6 md:px-8 md:pr-20"
             >
-                <h2 className="text-4xl md:text-6xl font-bold text-white max-w-3xl text-right leading-tight">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white max-w-3xl text-center md:text-right leading-tight">
                     <span className="text-purple-500">Research</span> to Reality
                 </h2>
             </motion.div>
